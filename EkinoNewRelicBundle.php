@@ -24,11 +24,11 @@ class EkinoNewRelicBundle extends Bundle
     {
         parent::registerCommands($application);
 
-        $container = $application->getKernel()->getContainer();
+        // $container = $application->getKernel()->getContainer();
 
-        if ($container->has('ekino.new_relic')) {
-            $newrelic = $container->get('ekino.new_relic');
-            $application->add(new NotifyDeploymentCommand($newrelic));
-        }
+        // if ($container->has('ekino.new_relic')) {
+        //     $newrelic = $container->get('ekino.new_relic');
+        //     $application->add(new NotifyDeploymentCommand($newrelic));
+        // }
     }
 }
